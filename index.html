@@ -1,17 +1,29 @@
 <html>
+	<head>
+		<title>Video2WebM.js</title>
+		<link href="styles.css" rel="stylesheet" />
+	</head>
 	<body>
-		<h1>Full Javascript Video to WebM converter</h1>
+		<h1>Video to WebM converter</h1>
 		File: <input type="file" id="fileInput" />
 		<br />
 		Fps: <input type="number" id="fpsInput" value="25" />
 		<br />
 		Quality: <input type="number" id="qualityInput" value="0.5" />
 		<br />
-		Size: <input type="text" id="sizeInput" value="640x480" />
+		Size: <input type="text" id="sizeInput" value="source" />
 		<br />
 		<button onclick="doDaMagic()">Convert to WebM</button>
 		<br /><br />
-		<div id="progress"></div>
+		<div id="output"></div>
+		Progress: <progress id="progress" value="0" max="100"></progress>
+		<p id="info">
+			This converter is written in Javascript -> You dont have to upload your video to some proprietary server
+			<br />More than 25 fps is idiotic
+			<br />Higher quality means larger WebM file, more than 1 is idiotic
+			<br />Size can be either source or something like 1280x720, 640x480
+			<br />Output isnt optimized so if you want to have small files use ffmpeg/avconv or some other shit
+		</p>
 		<div style="display: none;">
 			<video id="vid"></video>
 			<canvas id="canvas"></canvas>
