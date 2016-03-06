@@ -1,0 +1,21 @@
+<html>
+	<body>
+		File: <input type="file" id="fileInput" />
+		<br />
+		Fps: <input type="number" id="fpsInput" value="25" />
+		<br />
+		Quality: <input type="number" id="qualityInput" value="0.5" />
+		<br />
+		Size: <input type="text" id="sizeInput" value="640x480" />
+		<br />
+		<button onclick="doDaMagic()">Convert to WebM</button>
+		<br /><br />
+		<div id="progress"></div>
+		<div style="display: none;">
+			<video id="vid"></video>
+			<canvas id="canvas"></canvas>
+		</div>
+		<script src="js/whammy.js"></script>
+		<script src="js/convert.js"></script>
+	</body>
+</html>
