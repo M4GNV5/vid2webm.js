@@ -5,6 +5,7 @@ var sizeIn = document.getElementById("sizeInput");
 
 var output = document.getElementById("output");
 var progress = document.getElementById("progress");
+var progLabel = document.getElementById("progLabel");
 var vid = document.getElementById("vid");
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
@@ -63,6 +64,7 @@ function doDaMagic()
 			ctx.drawImage(vid, 0, 0, width, height);
 			webm.add(canvas);
 			progress.value = time;
+			progLabel.innerHTML = Math.round(time / duration * 100) + "%";
 
 			time += step;
 			if(time < duration)
