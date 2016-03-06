@@ -12,6 +12,7 @@ var ctx = canvas.getContext("2d");
 
 function doDaMagic()
 {
+	output.innerHTML = "";
 	if(!filesIn.files[0])
 	{
 		output.innerHTML = "Error: no file selected";
